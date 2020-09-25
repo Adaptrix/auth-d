@@ -1,1 +1,12 @@
 <p>home works!</p>
+<form action="" [formGroup]="foodsForm">
+  <div formArrayName="foods">
+    <div *ngFor="let food of foods.controls; let i=index">
+      <input type="text" name="" id="" [formControlName]="i">
+      <button (click)="onRemoveFoodClickHandler(i)">-</button>
+    </div>
+  </div>
+  <br>
+  <button (click)="onAddFoodClickHandler()">Add</button>
+  <button>Submit</button>
+</form>
